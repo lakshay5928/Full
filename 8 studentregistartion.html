@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Student Registration</title>
+    <style>
+        body {
+            background-color: antiquewhite;
+        }
+
+        .box {
+            border: 2px solid black;
+            align-items: center;
+            padding-bottom: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <center>
+        <div class="box">
+            <h1>Graphic Era University</h1>
+            <img src="geu.png" alt="" height="150px" width="150px">
+            <p style="font-size: large;">Student Online Examination Portal</p>
+            <button onclick="showPortal()" style="background-color: #29a36a; border-radius: 5px; padding: 10px;">Go To
+                Online Form</button>
+        </div>
+    </center>
+    <script>
+        function showPortal() {
+            let newWin;
+            alert("Welcome to Online Examination Registration")
+
+            let name = prompt("Enter the user name");
+
+            if (name == null || name == "") {
+                alert("Invalid Detail");
+                return;
+            }
+
+            let c = confirm("Confrim Submission for:" + name + "?");
+
+            if (c == true) {
+                newWin = window.open(" ", " ", "width:300px,height:300px")
+                newWin.document.write(`
+                <html>
+                <head>
+                <title>Admit Card</title>
+                <style>
+                body {
+                    font-family: Arial, sans-serif;
+                }
+                .box1 {
+                    border: 2px solid black;
+                    padding: 20px;
+                    width: 600px;
+                    position: relative; 
+                }
+                .photo {
+                    position: absolute;
+                    top: 20px;
+                    right: 20px;
+                    height: 100px;
+                    width: 100px;
+                    border: 2px solid gray;
+                }
+                .btn {
+                    padding: 10px 15px;
+                    border-radius: 5px;
+                    border: none;
+                    cursor: pointer;
+                    margin-right: 10px;
+                }
+                .print {
+                    background-color: red;
+                    color: white;
+                }
+                .close {
+                    background-color: blue;
+                    color: white;
+                }
+                </style>
+                </head>
+                <body>
+                <h2>Admit Card</h2>
+                <div class="box1">
+                    <img src="yashant.jpeg" class="photo">
+                    <p>Welcome! ${name}</p>
+                    <p><strong>Name:</strong> ${name}</p>
+                    <p><strong>Course:</strong> B.Tech CSE</p>
+                    <p><strong>Semester:</strong> 6th Semester</p>
+                    <p><strong>Exam Date:</strong> 25 June 2026</p>
+                    <p><strong>Exam Center:</strong> GEU Main Campus</p>
+                    <button onclick="window.print()" class="btn print">Print</button>
+                    <button onclick="window.close()" class="btn close">Close</button>
+                </div>
+                </body>
+                </html>
+            `)
+            }
+            else {
+                alert("Submission Cancelled");
+            }
+        }
+    </script>
+</body>
+
+</html>

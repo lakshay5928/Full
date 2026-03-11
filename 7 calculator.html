@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Calculator</title>
+    <style>
+        body
+        {
+            height: 100vh;
+            background-color: rgb(207, 205, 205);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;   
+        }
+        .box
+        {
+            background-color: rgb(0, 0, 0);
+            width: 172px;
+            height: 312px;
+            border-radius: 10px;
+        }
+        #display
+        {
+            width: 155px;
+            height: 30px;
+            margin: 5px;
+            text-align: right;
+            font-size: 16px;
+        }
+        .btn
+        {
+            width: 50px;
+            height: 40px;
+            margin: 2px;
+            background-color: rgb(172, 161, 161);
+            border-radius: 5px;
+        }
+        .operator
+        {
+            background-color: rgb(249, 66, 66);
+        }
+        .equal
+        {
+            background-color: rgb(247, 247, 33);
+        }
+        .clear
+        {
+            background-color: rgb(51, 247, 33);
+        }
+    </style>
+</head>
+<body>
+    <h1>Simple Calculator</h1>
+    <div class="box">
+    <input type="text" id="display" readonly>
+    <br>
+    <button class="btn" onclick="press('7')">7</button>
+    <button class="btn" onclick="press('8')">8</button>
+    <button class="btn" onclick="press('9')">9</button>
+    <br>
+    <button class="btn" onclick="press('4')">4</button>
+    <button class="btn" onclick="press('5')">5</button>
+    <button class="btn" onclick="press('6')">6</button>
+    <br>
+    <button class="btn" onclick="press('1')">1</button>
+    <button class="btn" onclick="press('2')">2</button>
+    <button class="btn" onclick="press('3')">3</button>
+    <br>
+    <button class="btn clear" onclick="cleardisplay()">C</button>
+    <button class="btn" onclick="press('0')">0</button>
+    <button class="btn equal" onclick="calculate()">=</button>
+    <br>
+    <button class="btn operator" onclick="press('+')">+</button>
+    <button class="btn operator" onclick="press('-')">-</button>
+    <button class="btn operator" onclick="press('*')">*</button>
+    <br>
+    <button class="btn operator" onclick="press('/')">/</button>
+    <button class="btn operator" onclick="press('**')">**</button>
+    <button class="btn operator" onclick="press('%')">%</button>
+    </div>
+    <script>
+        let calculator={
+            addtodisplay:function(value){
+                document.getElementById("display").value+=value;
+            },
+            cleardisplay:function(){
+                document.getElementById("display").value="";
+            },
+            calculate:function(){
+                let exp=document.getElementById("display").value;
+                document.getElementById("display").value=eval(exp);
+            }
+        }
+        function press(num) {
+            calculator.addtodisplay(num);
+        }
+        function cleardisplay() {
+            calculator.cleardisplay();
+        }
+        function calculate() {
+            calculator.calculate();
+        }
+    </script>
+</body>
+</html>

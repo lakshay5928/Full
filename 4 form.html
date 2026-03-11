@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Online Job Application</title>
+    <style>
+        input:valid, textarea:valid, select:valid {
+            border: 2px solid green;
+        }
+        input:invalid, textarea:invalid, select:invalid {
+            border: 2px solid red;
+        }
+        input, textarea, select {
+            padding: 6px;
+            margin: 4px 0;
+            width: 250px;
+        }
+        input[type="checkbox"] {
+    width: auto;
+    padding: 0;
+    margin: 1 5px 0 0;
+}
+    </style>
+</head>
+<body bgcolor="#EAF2F6">
+<center>
+    <img src="tech.png" width="100" alt="company Logo"><br><br>
+    <h2>Online Job Application Form</h2>
+</center>
+<hr>
+<center>
+<form action="thanks.html" target="_self">
+    Full Name:
+    <br>
+    <input type="text" name="fullname" required minlength="4">
+    <br><br>
+    Email Address:
+    <br>
+    <input type="email" name="email" required>
+    <br><br>
+    Mobile Number:
+    <br>
+    <input type="text" name="mobile"
+           pattern="[0-9]{10}"
+           placeholder="10 digit number"
+           required>
+    <br><br>
+    Years of Experience:
+    <br>
+    <input type="number" name="experience" min="0" max="30" step="1" required>
+    <br><br>
+    Job Role:
+    <br>
+    <select name="role" required>
+        <option value="">--Select Job Role--</option>
+        <option>Web Developer</option>
+        <option>Data Scientist</option>
+        <option>AI Engineer</option>
+        <option>DevOps Engineer</option>
+    </select>
+    <br><br>
+    Technical Skills:
+    <br>
+    <input type="checkbox"> HTML
+    <input type="checkbox"> CSS
+    <input type="checkbox"> JavaScript
+    <input type="checkbox"> Python
+    <input type="checkbox"> Java
+    <br><br>
+    Cover Letter:
+    <br>
+    <textarea rows="5" cols="40" required></textarea>
+    <br><br>
+Upload Resume:
+<br>
+<input type="file" name="resume" accept=".pdf,.doc,.docx" required>
+<br><br> 
+    <input type="submit" value="Apply">
+</center>
+</form>
+</body>
+</html>

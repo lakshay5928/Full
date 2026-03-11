@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Graphic Era University Theme Changer</title>
+    <style>
+        body {
+            background-color: rgb(217, 204, 187);
+        }
+        button:hover {
+            transform: scale(1.05);
+        }
+        .i {
+            width: 200px;
+            height: 150px;
+            margin: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <center>
+        <h1>Graphic Era University</h1>
+        <img src="geu.png" alt="" height="100px" width="100px">
+        <h3>About Our University</h3>
+        <p>Founded by Prof. Kamal Ghanshala in 1997, Graphic Era (Deemed to be University) has grown immensely. As the
+            Best University in Dehradun, we offer a high-quality education and a nurturing environment that encourages
+            innovation, fosters critical thinking, and prepares you for the future. To offer a world-class education
+            that focuses on cutting-edge technology, student professional development, critical thinking, and
+            high-quality research. Graphic Era (Deemed to be University), India’s premier university, has accomplished
+            countless milestones in its illustrious history thanks to its academic rigor, continuously top-performing
+            students and alumni, and a very strong and competent teaching faculty.</p>
+        <h3>Our Achievements</h3>
+        <img class="i" src="1.png" alt="">
+        <img class="i" src="2.png" alt="">
+        <img class="i" src="3.png" alt=""><br>
+        <button onclick="changeTheme()" style="background-color: green; color: white; font-size: 16px; padding: 10px; border-radius: 5px; cursor: pointer;">Change Theme</button>
+    </center>
+    <script>
+        function changeTheme() {
+            let colors = ["#ff0000", "#00ff00", "#0000ff", "#ffff00", "#ff00ff", "#00ffff", "#800000", "#008000", "#000080", "#808000", "#800080", "#008080"];
+            let index = Math.floor(Math.random() * colors.length);
+            document.body.style.backgroundColor = colors[index];
+        }
+    </script>
+</body>
+
+</html>
