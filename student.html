@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Feedback Form</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .header {
+            background-color: rgb(255, 255, 255);
+            text-align: center;
+        }
+        .header img {
+            width: 90px;
+            margin-top: 10px;
+            border-radius: 40px;
+        }
+        form {
+            width: 25%;
+            margin: 30px auto;
+            padding: 35px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 0 35px gray;
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 8px;
+            margin-top: 6px;
+        }
+        input:valid {
+            border: 2px solid green;
+        }
+        input:invalid {
+            border: 2px solid red;
+        }
+    </style>
+</head>
+<body>
+<div class="header">
+    <h1>GRAPHIC ERA DEEMED TO BE UNIVERSITY</h1>
+    <img src="geu.png" alt="College Logo">
+</div>
+<h2>Student Feedback Form</h2>
+    <form action="thanks.html">
+        <label>Student Name</label>
+        <input type="text" placeholder="Enter your Name" maxlength="30" required>
+        <label>Email Address</label>
+        <input type="email" placeholder="Enter your email" pattern="^[a-zA-Z0-9._%+-]+@geu\.ac\.in$" required>
+        <label>Course</label>
+        <select required>
+            <option value="">Select Course</option>
+            <option>Full Stack</option>
+            <option>Complier Design</option>
+            <option>Machine Learning</option>
+            <option>Carrer Skill</option>
+        </select>
+        <label>Feedback/Comments</label>
+        <textarea rows="4" placeholder="Enter here.." required></textarea>
+        <br><br>
+        <input type="submit" value="Submit"
+               style="background-color: green; color: white; padding: 12px; border: none; width: 100%;">
+    </form>
+</body>
+</html>

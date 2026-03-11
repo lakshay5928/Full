@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Hospital Interactive Map</title>
+</head>
+
+<body>
+    <h2 align="center">Interactive Hospital Map</h2>
+    <p align="center">
+        Click on different areas to navigate and access department information
+    </p>
+    <center>
+        <img src="hospital.png" usemap="#hospitalmap" width="800" height="500">
+        <map name="hospitalmap">
+            <area shape="rect" coords="50,50,300,200" href="opd.html" alt="OPD">
+            <area shape="circle" coords="500,150,75" href="lab.html" alt="Diagnostic Lab">
+            <area shape="poly" coords="350,300,450,280,550,320,520,400,370,380" href="emergency.html"
+                alt="Emergency Zone">
+        </map>
+    </center>
+</body>
+
+</html>
